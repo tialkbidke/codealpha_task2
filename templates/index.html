@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Chatbot Support</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <div class="header-info">
+                <div class="avatar">
+                    <img src="https://ui-avatars.com/api/?name=FAQ+Bot&background=6366f1&color=fff" alt="Bot Avatar">
+                    <span class="status-indicator"></span>
+                </div>
+                <div>
+                    <h2>Support Assistant</h2>
+                    <p>Always here to help</p>
+                </div>
+            </div>
+            <button class="close-btn" aria-label="Close Chat">&times;</button>
+        </div>
+        
+        <div class="chat-body" id="chat-body">
+            <div class="message bot-message">
+                <div class="message-content">
+                    Hello! I'm your virtual support assistant. How can I help you today? You can ask me about shipping, returns, accounts, and more.
+                </div>
+                <div class="message-timestamp" id="initial-time"></div>
+            </div>
+        </div>
+
+        <div class="chat-input-area">
+            <form id="chat-form">
+                <input type="text" id="user-input" placeholder="Type your question here..." autocomplete="off" required>
+                <button type="submit" class="send-btn" aria-label="Send Message">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                </button>
+            </form>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
